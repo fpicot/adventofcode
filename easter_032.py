@@ -32,6 +32,6 @@ for list in input:
   if (list[0] + list[1]) > list[2]:
     count += 1
 
-print 'Nombre de triangles : {}'.format(count)
+print('Nombre de triangles : {}'.format(count))
 
 

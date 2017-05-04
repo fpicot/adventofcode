@@ -16,24 +16,24 @@ _reg = re.compile('([LR])([0-9]*)')
 #Preparation
 inputs = base.split(', ')
 for input in inputs:
-	#Extraction
-	result = _reg.match(input)
+  #Extraction
+  result = _reg.match(input)
 
 	#Direction
-        axe += 1 if  result.group(1) == "L" else -1
-	axe = axe % 4
+  axe += 1 if  result.group(1) == "L" else -1
+  axe = axe % 4
 
-	#Distance
-	dist=int(result.group(2))
+  #Distance
+  dist=int(result.group(2))
 
-	#Parcourt du trajet	
-	for i in range(dist):
-		coordinates =  map(operator.add, coordinates, _dir[axe])
-		if coordinates in path:
-			print "Distance = {}".format(sum(map(abs,coordinates)))
-			quit()
-		else:
-			path.append(coordinates)
+  #Parcourt du trajet	
+  for i in range(dist):
+    coordinates =  map(operator.add, coordinates, _dir[axe])
+    if coordinates in path:
+      print("Distance = {}".format(sum(map(abs,coordinates))))
+      quit()
+    else:
+      path.append(coordinates)
 
 
 

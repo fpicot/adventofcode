@@ -27,8 +27,7 @@ for line in open(input_file):
 for text in letters:
   result+=freq(text)
 
-
-print result
+print(result)
 
 
 

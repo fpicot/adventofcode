@@ -10,17 +10,16 @@ _reg = re.compile('([a-z\-]*)-([0-9]*)\[([a-z]{5})\]')
 
 #Analyse frequentielle
 def freq(text):
-   _d = dict()
-   for letter in text:
-     if letter not in _d:
-       if letter != '-': 
-	 #On multiplie par -1 pour pouvoir trier dans le meme ordre
-         _d[letter] = -1 * text.count(letter) 
-   
-   _od = sorted(_d.items(), key = operator.itemgetter(1,0))
-   return _od
+  _d = dict()
+  for letter in text:
+    if letter not in _d:
+      if letter != '-': 
+        #On multiplie par -1 pour pouvoir trier dans le meme ordre
+        _d[letter] = -1 * text.count(letter) 
 
-   
+  _od = sorted(_d.items(), key = operator.itemgetter(1,0))
+  return _od
+
 #Parcours du fichier
 for line in open(input_file):
   #Extraction des elements
@@ -37,5 +36,4 @@ for line in open(input_file):
   if checksum_calc == checksum:
     result += id
 
-
-print "Total : {}".format(result)
+print("Total : {}".format(result))

@@ -4,7 +4,7 @@ import re
 
 input_file = "easter_07.input"
 count = 0
-    
+
 for line in open(input_file):
   TLS = False
   HS = False
@@ -19,14 +19,14 @@ for line in open(input_file):
       #If in Hypernet, can't be TLS, skip end of line
       if HS== True: 
         TLS=False
-	break
+        break
       else:
-	TLS=True
+        TLS=True
     i+=1
   if TLS==True:
     count +=1
 
-print count
+print(count)
 
 
 

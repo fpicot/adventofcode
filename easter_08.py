@@ -1,5 +1,6 @@
 #!/usr/bin/python
-import re,sys,time,curses
+# -*- coding: utf-8 -*-
+import re,sys,time
 
 screen = [[0 for x in range(50)] for y in range(6)]
 
@@ -40,7 +41,7 @@ result = sum([sum(screen[y]) for y in range(6)])
 
 print ("Nombre de pixels : {}".format(result))
 print ('')
-#Print
+
 for y in range(6):
   for x in range(50):
     state = "X" if screen[y][x]==1 else "."

@@ -28,4 +28,4 @@ for input in inputs:
 	#Calcul des coordonnees
 	coordinates =  map(operator.add, coordinates, [x*dist for x in _dir[axe]])
 	
-print "Distance = {}".format(sum(map(abs,coordinates)))
+print("Distance = {}".format(sum(map(abs,coordinates))))

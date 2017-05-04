@@ -28,7 +28,7 @@ for text in letters:
   result+=freq(text)
 
 
-print result
+print(result)
 
 
 
