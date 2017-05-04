@@ -1,2 +1,2 @@
 # adventofcode
-Scripts pour l'Advent of Code 2016
+Scripts pour l'Advent of Code 2016 : http://adventofcode.com/2016
